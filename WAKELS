@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WAKELS - Roupas e Acessórios</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #ff4d4d;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #333;
+            overflow: hidden;
+        }
+        nav a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            background-color: #ff4d4d;
+        }
+        .container {
+            padding: 20px;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        h2 {
+            color: #333;
+        }
+        .delivery-info {
+            background-color: #ffcc99;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .form-container {
+            background-color: #e6e6e6;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .form-group button {
+            background-color: #ff4d4d;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .form-group button:hover {
+            background-color: #e60000;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>WAKELS</h1>
+        <p>Roupas, Acessórios para Celular, e Mais</p>
+    </header>
+    <nav>
+        <a href="#sobre">Sobre Nós</a>
+        <a href="#produtos">Produtos</a>
+        <a href="#entregas">Entregas</a>
+        <a href="#revendedor">Revendedor Oficial</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+    <div class="container">
+        <section id="sobre" class="section">
+            <h2>Sobre Nós</h2>
+            <p>A WAKELS é uma empresa Moçambicana dedicada à venda de roupas e acessórios para celular. Oferecemos uma experiência de compra vibrante e acessível, com entregas rápidas para a cidade de Maputo.</p>
+        </section>
+        <section id="produtos" class="section">
+            <h2>Nossos Produtos</h2>
+            <p>Oferecemos uma ampla variedade de roupas e acessórios para celular. Visite-nos para explorar todas as nossas opções coloridas e de alta qualidade.</p>
+        </section>
+        <section id="entregas" class="section">
+            <h2>Entregas a Domicílio</h2>
+            <div class="delivery-info">
+                <p>Fazemos entregas a domicílio em toda a cidade de Maputo com um custo adicional. Para mais informações ou para agendar uma entrega, por favor entre em contacto connosco.</p>
+            </div>
+        </section>
+        <section id="revendedor" class="section">
+            <h2>Seja um Revendedor Oficial</h2>
+            <div class="form-container">
+                <form action="processa_formulario.php" method="post" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="nome">Nome Completo:</label>
+                        <input type="text" id="nome" name="nome" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="telefone">Telefone:</label>
+                        <input type="text" id="telefone" name="telefone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="localizacao">Localização (Cidade de Maputo):</label>
+                        <input type="text" id="localizacao" name="localizacao" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="telefone4g">Possui um Celular 4G?</label>
+                        <input type="text" id="telefone4g" name="telefone4g" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="bi">Fotos do B.I. (frente e verso):</label>
+                        <input type="file" id="bi" name="bi[]" accept="image/*" multiple required>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit">Enviar Candidatura</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <section id="contacto" class="section">
+            <h2>Contacto</h2>
+            <p>Para mais informações, entre em contacto connosco pelo telefone <strong>878900690</strong> ou pelo e-mail <strong>contato@wakels.co.mz</strong>.</p>
+        </section>
+    </div>
+</body>
+</html>
